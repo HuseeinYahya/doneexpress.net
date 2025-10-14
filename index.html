@@ -172,9 +172,226 @@
       </div>
     </div>
 
+    <!-- Cart offcanvas -->
+    <div class="offcanvas offcanvas-start py-2 p-sm-2 p-md-3" id="orderOffcanvas" tabindex="-1" style="width: 680px;">
+
+      <!-- Title -->
+      <div class="px-4 pt-3">
+        <div class="d-flex justify-content-between align-items-center border-bottom pb-2 pb-sm-3">
+          <h4 class="offcanvas-title d-flex align-items-center mb-1">
+            تتبع حالة الطلب <!-- <span class="fs-base fw-normal text-body-secondary ms-3">10114</span> -->
+          </h4>
+          <button class="btn-close mb-1 me-n1" type="button" data-bs-dismiss="offcanvas" data-bs-target="#orderOffcanvas" aria-label="Close"></button>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="offcanvas-body">
+
+        <div class="align-items-center mt-2 mt-md-2 mb-2 mb-md-0 ar-steps d-flex flex-nowrap">
+          <a href="#" class="ar-step completed text-decoration-none link-primary">
+            <div class="ar-step-icon-wrap">
+              <div class="ar-step-icon">
+                <svg style="max-width:55%" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M506.047,309.814H5.953c-3.288,0-5.953,2.665-5.953,5.953v29.679c0,23.016,18.658,41.674,41.674,41.674h147.094
+                    l-18.305,75.482h-22.615c-9.864,0-17.86,7.997-17.86,17.86c0,9.864,7.997,17.86,17.86,17.86h216.302
+                    c9.864,0,17.86-7.997,17.86-17.86c0-9.864-7.997-17.86-17.86-17.86h-22.615l-18.305-75.482h147.094
+                    c23.016,0,41.674-18.658,41.674-41.674v-29.679C512,312.48,509.335,309.814,506.047,309.814z"/>
+                  <path d="M304.115,157.82h-0.001c0,6.576-5.332,11.907-11.907,11.907c-6.576,0-11.907-5.331-11.907-11.907v-14.399H231.7v14.399
+                    c0,6.576-5.331,11.907-11.907,11.907c-6.575,0-11.907-5.331-11.907-11.907v-14.399h-27.184v69.462h150.596v-69.462h-27.184
+                    V157.82z"/>
+                  <path d="M470.326,13.676H41.674C18.658,13.676,0,32.334,0,55.35v224.697C0,283.335,2.666,286,5.953,286h500.093
+                    c3.289,0,5.953-2.665,5.953-5.953V55.35C512,32.334,493.342,13.676,470.326,13.676z M355.111,224.791
+                    c0,6.576-5.332,11.907-11.907,11.907H168.796c-6.575,0-11.907-5.331-11.907-11.907v-93.276c0-6.576,5.332-11.907,11.907-11.907
+                    h39.091v-8.516c0-26.53,21.584-48.114,48.114-48.114s48.114,21.584,48.114,48.114v8.515h39.091
+                    c6.575,0,11.907,5.331,11.907,11.907V224.791z"/>
+                  <path d="M280.3,111.093L280.3,111.093c0-32.108-48.6-32.121-48.6,0v8.515h48.6V111.093z"/>
+                </svg>
+              </div>
+            </div>
+            <h4 class="ar-step-title">إستلام طلبك</h4>
+          </a>
+          <a href="#ar-step=1" class="ar-step completed text-decoration-none link-primary">
+            <div class="ar-step-icon-wrap">
+              <div class="ar-step-icon">
+                <svg style="max-width:55%" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M490.667,213.333h-64H384v-192C384,9.557,374.443,0,362.667,0h-85.333v106.667c0,11.776-9.557,21.333-21.333,21.333
+                  s-21.333-9.557-21.333-21.333V0h-85.333C137.557,0,128,9.557,128,21.333v192h-21.333H21.333C9.557,213.333,0,222.891,0,234.667
+                  v256C0,502.443,9.557,512,21.333,512h256h213.333c11.776,0,21.333-9.557,21.333-21.333v-256
+                  C512,222.891,502.443,213.333,490.667,213.333z M256,469.333H42.667V256h42.667v106.667c0,8.619,5.205,16.405,13.163,19.712
+                  c7.979,3.285,17.131,1.472,23.253-4.629l27.584-27.584l27.584,27.584C180.992,381.824,186.453,384,192,384
+                  c2.752,0,5.525-0.533,8.171-1.621c7.957-3.307,13.163-11.093,13.163-19.712V256H256V469.333z M469.333,469.333H298.667V256H320
+                  v106.667c0,8.619,5.205,16.405,13.163,19.712c7.979,3.285,17.131,1.472,23.253-4.629L384,350.165l27.584,27.584
+                  c4.075,4.075,9.536,6.251,15.083,6.251c2.752,0,5.525-0.533,8.171-1.621c7.957-3.307,13.163-11.093,13.163-19.712V256h21.333
+                  V469.333z"/>
+                </svg>
+              </div>
+            </div>
+            <h4 class="ar-step-title">قيد النقل</h4>
+          </a>
+          <a href="#ar-step=2" class="ar-step completed text-decoration-none link-primary">
+            <div class="ar-step-icon-wrap">
+              <div class="ar-step-icon">
+                <svg style="max-width:55%" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m91.38347,402.07683a18.27622,18.27622 0 0 0 -18.27622,18.27622a18.27622,18.27622 0 0 0 18.27622,18.27622l109.65732,0a18.27622,18.27622
+                  0 0 0 18.27622,-18.27622a18.27622,18.27622 0 0 0 -18.27622,-18.27622l-109.65732,0z"/>
+                  <path d="m73.10725,0a18.27805,18.27805 0 0 0 -16.34863,10.13764l-54.82866,110.29991a18.27805,18.27805 0 0 0 -1.82031,7.71019a18.27805,18.27805 0 0 0 -0.10966,0.42766l0,364.88179a18.27805,18.27805 0 0 0 
+                  18.27622,18.27622l475.1817,0a18.27805,18.27805 0 0 0 18.27622,-18.27622l0,-364.88179a18.27805,18.27805 0 0 0 0,-0.03655a18.27805,18.27805 0 0 0 -1.92759,-8.10294l-54.82866,-110.29991a18.27805,18.27805 0 0 0 
+                  -16.34625,-10.13599l-365.52439,0zm11.2799,36.55244l113.47668,0l-11.95795,73.74747l-138.14263,0l36.6239,-73.74747zm150.45751,0l78.63764,0l12.31506,73.74747l-102.87501,0l11.92231,-73.74747zm115.68993,0l76.7815,0l36.65954,73.74747l-101.12598,0l-12.31506,-73.74747zm-313.97978,110.29991l146.20975,0l0,182.1196a18.27805,18.27805 
+                  0 0 0 31.19805,12.92184l60.18304,-60.18304l60.18304,60.18304a18.27805,18.27805 0 0 0 31.19805,-12.92184l0,-182.1196l109.65732,0l0,328.32936l-438.62926,0l0,-328.32936zm182.76219,0l109.65732,0l0,137.99971l-41.90682,-41.90682a18.27805,18.27805 0 0 0 -25.84367,0l-41.90682,41.90682l0,-137.99971z"/>
+                </svg>
+              </div>
+            </div>
+            <h4 class="ar-step-title">جاهز للتسليم</h4>
+          </a>
+          <div class="ar-step">
+            <div class="ar-step-icon-wrap">
+              <div class="ar-step-icon">
+                <svg style="max-width:55%" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M481.582,336.74H30.417H0v44.701c0,20.685,16.829,37.515,37.515,37.515h134.503l-5.733,39.566h-28.913v30.417h24.506
+                  h188.242h24.506v-30.417h-28.913l-5.733-39.566h134.503c20.686,0,37.515-16.83,37.515-37.515V336.74H481.582z M276.948,393.057
+                  h-41.897V362.64h41.897V393.057z"/>
+                  <path d="M474.485,23.061H37.515C16.829,23.061,0,39.891,0,60.575v245.748h30.417h451.166H512V60.575
+                  C512,39.891,495.171,23.061,474.485,23.061z M265.49,250.044L256,257.62l-9.489-7.576c-2.438-1.948-59.745-48.398-59.745-109.045
+                  c0-38.176,31.059-69.235,69.235-69.235s69.235,31.059,69.235,69.235C325.234,201.645,267.928,248.097,265.49,250.044z"/>
+                  <path d="M255.999,111.91c-16.04,0-29.09,13.05-29.09,29.09s13.05,29.09,29.09,29.09s29.09-13.05,29.09-29.09
+                  C285.09,124.96,272.04,111.91,255.999,111.91z"/>
+                </svg>
+              </div>
+            </div>
+            <h4 class="ar-step-title">إكتمال</h4>
+          </div>
+        </div>
+
+        <!-- Orders accordion -->
+        <div class="accordion accordion-alt accordion-orders" id="orders">
+
+          <!-- Order -->
+          <div class="accordion-item border-top mb-0">
+            <div class="accordion-header">
+              <a class="accordion-button d-flex fs-4 fw-normal text-decoration-none py-3 collapsed" href="#orderOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="orderOne">
+                <div class="d-flex justify-content-between w-100">
+                  <div class="me-3 me-sm-4">
+                    <div class="fs-sm text-body-secondary">الحالة</div>
+                    <span class="d-none d-sm-block badge bg-info bg-opacity-10 text-info fs-xs">جاهز للتسليم</span>
+                    <span class="d-sm-none fs-sm badge bg-info bg-opacity-10 text-info fs-xs">جاهز</span>
+                  </div>
+                  <div class="me-3 me-sm-4">
+                    <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">تاريخ الطلب</div>
+                    <div class="d-sm-none fs-sm text-body-secondary mb-2">الطلب</div>
+                    <div class="fs-sm fw-medium text-dark">أكتوبر 11, 2025</div>
+                  </div>
+                  <div class="me-3 me-sm-4">
+                    <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">موعد التسليم</div>
+                    <div class="d-sm-none fs-sm text-body-secondary mb-2">التسليم</div>
+                    <div class="fs-sm fw-medium text-dark">أكتوبر 27, 2023</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="accordion-collapse collapse" id="orderOne" data-bs-parent="#orders">
+              <div class="accordion-body">
+                <div class="table-responsive pt-1">
+                  <table class="table align-middle w-100">
+                    <tbody>
+                      <tr class="d-flex justify-content-between w-100 px-0 px-md-3">
+                        <td class="border-0 py-1 px-0">
+                          <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">رقم الطلبية</div>
+                          <div class="d-sm-none fs-sm text-body-secondary mb-2">رقم الطلب</div>
+                          <div class="fs-sm fw-medium text-dark">10114</div>
+                        </td>
+                        <td class="border-0 py-1 px-0">
+                          <div class="fs-sm text-body-secondary mb-2">عدد القطع</div>
+                          <div class="fs-sm fw-medium text-dark">15</div>
+                        </td>
+                        <td class="border-0 py-1 px-0">
+                          <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">المبلغ المدفوع</div>
+                          <div class="d-sm-none fs-sm text-body-secondary mb-2">المدفوع</div>
+                          <div class="fs-sm fw-medium text-dark">
+                            <span>150</span>
+                            <span>
+                              <svg style="max-width: 20%" width="15" height="15" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+                                <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+                              </svg>
+                            </span>
+                          </div>
+                        </td>
+                        <td class="border-0 py-1 px-0">
+                          <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">المبلغ المتبقي</div>
+                          <div class="d-sm-none fs-sm text-body-secondary mb-2">المتبقي</div>
+                          <div class="fs-sm fw-medium text-dark">
+                            <span>150</span>
+                            <span>
+                              <svg style="max-width: 20%" width="15" height="15" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+                                <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+                              </svg>
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="bg-secondary rounded-1 p-4 my-2">
+                  <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                      <div class="fs-sm fw-medium text-dark mb-1">اسم العميل:</div>
+                      <div class="fs-sm">ماجد عبدالله الجابري</div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                      <div class="fs-sm fw-medium text-dark mb-1">نقطة الإستلام:</div>
+                      <div class="fs-sm">تريم - الفرع الرئيسي</div>
+                    </div>
+                    <div class="col-md-4 mb-1 mb-md-0">
+                      <a class="btn btn-sm btn-primary w-100 w-md-auto" href="https://wa.me/966559559551" target="_blank">
+                        <i class="ai-phone-call me-2 ms-n1"></i>
+                        التواصل مع المندوب
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+
+      <!-- Order input + Total -->
+      <div class="px-4 pb-3 pb-sm-4 pb-sm-5">
+        <div class="d-sm-flex align-items-center border-top pt-4">
+          
+          <div class="d-flex align-items-center justify-content-center mb-3 mb-sm-0 order-1">
+            <span class="d-none d-sm-block fs-lg me-2">الطلب:</span>
+            <span class="d-sm-none fs-xl me-2">رقم الطلب:</span>
+            <span class="h5 mb-0">10114</span>
+          </div>
+          <div class="input-group input-group-sm border-dashed me-sm-4 me-md-5 order-0">
+            <input class="form-control text-uppercase" type="number" placeholder="إدخال رقم طلبية آخرى">
+            <button class="btn btn-secondary" type="button">تتبع الشحنة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="d-flex align-items-center justify-content-between px-4 pb-3">
+        <div class="nav d-none d-sm-block">
+          <a class="nav-link fw-semibold px-0" href="#orderOffcanvas" data-bs-dismiss="offcanvas">
+            <i class="ai-chevron-left fs-xl me-2"></i>
+            العودة للصفحة الرئيسية
+          </a>
+        </div>
+        <a class="btn btn-lg btn-primary w-100 w-sm-auto" href="#">
+          تتبع حالة الطلب
+          <i class="ai-chevron-left ms-2 me-n1"></i>
+        </a>
+      </div>
+    </div>
     <!-- Page wrapper -->
     <main class="page-wrapper">
-
       <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
       <header class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -418,7 +635,7 @@
                   <i class="ai-dropbox"></i>
                 </span>
                 <input id="searchOrder" class="form-control col-6 col-lg-7 ps-1" type="number" placeholder="رقم التتبع الخاص بك">
-                <a href="#" class="btn btn-primary col-5 col-lg-4">تتبع الشحنة</a>
+                <a href="#orderOffcanvas" class="btn btn-primary col-5 col-lg-4" data-bs-toggle="offcanvas" data-bs-target="#orderOffcanvas">تتبع الشحنة</a>
               </div>
             </div>
           </div>
@@ -1293,10 +1510,15 @@
                           <div class="ps-3">
                             <h3 class="h4 text-info mb-0">الإنطلاقة</h3>
                             <div class="d-flex align-items-end">
-                              <span class="h5 mb-1 me-1">SR</span>
                               <span class="h2 mb-0" data-s30-price>7</span>
                               <span class="h2 mb-0 d-none" data-s40-price>8</span>
                               <span class="h2 mb-0 d-none" data-s60-price>9</span>
+                              <span class="h5 mb-2 ms-2">
+                                <svg class="d-block" width="30" height="30" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+                                  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+                                </svg>
+                              </span>
                               <span class="h5 mb-1 ms-1">للشحنة</span>
                             </div>
                             <div class="d-block mt-1">
@@ -1360,10 +1582,15 @@
                           <div class="ps-3">
                             <h3 class="h4 text-primary mb-0">النمو</h3>
                             <div class="d-flex align-items-end">
-                              <span class="h5 mb-1 me-1">SR</span>
                               <span class="h2 mb-0" data-s30-price>5</span>
                               <span class="h2 mb-0 d-none" data-s40-price>6</span>
                               <span class="h2 mb-0 d-none" data-s60-price>7</span>
+                              <span class="h5 mb-2 ms-2">
+                                <svg class="d-block" width="30" height="30" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+                                  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+                                </svg>
+                              </span>
                               <span class="h5 mb-1 ms-1">للشحنة</span>
                             </div>
                             <div class="d-block mt-1">
@@ -1425,10 +1652,15 @@
                           <div class="ps-3">
                             <h3 class="h4 text-warning mb-0">الإحترافية</h3>
                             <div class="d-flex align-items-end">
-                              <span class="h5 mb-1 me-1">SR</span>
                               <span class="h2 mb-0" data-s30-price>4</span>
                               <span class="h2 mb-0 d-none" data-s40-price>5</span>
                               <span class="h2 mb-0 d-none" data-s60-price>6</span>
+                              <span class="h5 mb-2 ms-2">
+                                <svg class="d-block" width="30" height="30" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+                                  <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+                                </svg>
+                              </span>
                               <span class="h5 mb-1 ms-1">للشحنة</span>
                             </div>
                             <div class="d-block mt-1">
@@ -1750,12 +1982,33 @@
     <script src="assets/vendor/kashida-js/kashida.js"></script>
     <script>
       const lenis = new Lenis()
-      function raf(time){
+      function raf(time) {
         lenis.raf(time)
         requestAnimationFrame(raf)
       }
       requestAnimationFrame(raf)
-    </script>
+
+      document.addEventListener('shown.bs.offcanvas', (e) => {
+        const off = e.target
+        off.setAttribute('data-lenis-prevent', '')
+        off.style.overflowY = 'auto'
+        off.style.webkitOverflowScrolling = 'touch'
+        off.style.touchAction = 'auto'
+        lenis.stop()
+        document.html.style.overflow = 'hidden'
+      })
+
+      document.addEventListener('hidden.bs.offcanvas', (e) => {
+        const off = e.target
+        off.removeAttribute('data-lenis-prevent')
+        off.style.overflowY = ''
+        off.style.touchAction = ''
+        lenis.start()
+        document.html.style.overflow = ''
+      })
+      </script>
+
+
     <script type="text/javascript">
       const myClick = document.querySelectorAll('.searchClick')
       myClick.forEach(el => {
