@@ -44,10 +44,6 @@
         transform: rotate(90deg) scaleX(1.25) !important;
         border-radius: 0 !important;
         height: 15px !important;
-        /*height: 15px !important;
-        top: calc(26.7% - 10% / 2);
-        position: absolute;
-        width: 990px;*/
         }
         @media(max-width: 768px){
           .pin-spacer .scrollTrigger div .progress {
@@ -269,7 +265,7 @@
           <!-- Order -->
           <div class="accordion-item border-top mb-0">
             <div class="accordion-header">
-              <a class="accordion-button d-flex fs-4 fw-normal text-decoration-none py-3 collapsed" href="#orderOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="orderOne">
+              <a class="accordion-button d-flex fs-4 fw-normal text-decoration-none py-3" href="#orderOne" data-bs-toggle="collapse" aria-expanded="true" aria-controls="orderOne">
                 <div class="d-flex justify-content-between w-100">
                   <div class="me-3 me-sm-4">
                     <div class="fs-sm text-body-secondary">الحالة</div>
@@ -289,7 +285,7 @@
                 </div>
               </a>
             </div>
-            <div class="accordion-collapse collapse" id="orderOne" data-bs-parent="#orders">
+            <div class="accordion-collapse collapse show" id="orderOne" data-bs-parent="#orders">
               <div class="accordion-body">
                 <div class="table-responsive pt-1">
                   <table class="table align-middle w-100">
@@ -562,72 +558,10 @@
               </div>
             </div>
             <div class="col-lg-5 order-lg-1">
-              <h1 class="display-5 fw-bolder text-center text-lg-start pb-sm-2 pb-md-3" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-out-back">الوجهـة الأسـرع والآمـن<br> للــــــشـحــــن والـــــتـجــارة<br> <span class="text-gradient">الإلكــترونـيــــة باليمن</span></h1>
-              <!-- <script>
-                function applyKashida(text) {
-                const words = text.split(" ");
-                return words.map(word => {
-                  // لا نضيف كشيدة للكلمات القصيرة
-                  if (word.length < 4) return word;
+              <h1 class="display-5 fw-bolder text-center text-lg-start pb-sm-2 pb-md-3" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-out-back">
+                الوجهـة الأسـرع والآمـن<br> للــــــشـحــــن والـــــتـجــارة<br> <span class="text-gradient">الإلكــترونـيــــة باليمن</span>
+              </h1>
 
-                  const letters = word.split("");
-                  let kashidaWord = "";
-                  for (let i = 0; i < letters.length; i++) {
-                    kashidaWord += letters[i];
-                    // نضيف كشيدة بين بعض الحروف بشرط:
-                    // - ألا تكون في النهاية
-                    // - ألا تكون بعد مسافة
-                    if (i < letters.length - 2 && i % 2 === 0) {
-                      kashidaWord += "ـ";
-                    }
-                  }
-                  return kashidaWord;
-                }).join(" ");
-              }
-
-              // التطبيق على العنصر
-              const el = document.getElementById("arabicText");
-              el.textContent = applyKashida(el.textContent);
-              </script> -->
-              <style>
-                .arabicText {text-align: justify !important; text-align-last: right;}
-              </style>
-              <script type="module">
-                import kashida from './kashida.js';
-            
-                const elements = document.querySelectorAll('[data-kashida="true"]');
-                elements.forEach(el => {
-                const original = el.textContent.trim();
-                const words = original.split(" ");
-                const LINE_LIMIT = 60;
-
-                let currentLine = "";
-                let lines = [];
-
-                for (let i = 0; i < words.length; i++) {
-                  const word = words[i];
-                  const testLine = currentLine + " " + word;
-                  if (testLine.length <= LINE_LIMIT) {
-                    currentLine = testLine;
-                  } else {
-                    lines.push(currentLine.trim());
-                    currentLine = word;
-                  }
-                }
-                if (currentLine) lines.push(currentLine.trim());
-
-                // تمطيط الكلمات الطويلة فقط
-                const justifiedLines = lines.map(line => {
-                  const lineWords = line.split(" ");
-                  return lineWords.map(word => {
-                    const clean = word.replace(/[^ء-ي]/g, "");
-                    return clean.length >= 6 ? kashida(word, 2, 0.6) : word;
-                  }).join(" ");
-                });
-
-                el.textContent = justifiedLines.join("\n");
-              });
-            </script>
               <p class="fs-lg text-center text-lg-start pb-xl-2 mx-auto mx-lg-0 mb-5 arabicText d-none d-md-block" style="max-width: 420px;" data-aos="fade-down" data-aos-delay="800" data-aos-easing="ease-out-back">هي شركة احترافية في خدمات الشحن والأولى في اليمن، نتميز بتقديم خدمات لربط المتاجر الإلكترونية بخدمة الشحن والحلول اللوجستية المتكاملة.</p>
               <div class="mb-5 mb-md-0"></div>
               <div class="input-group mx-auto mx-lg-0 row" id="searchOrderInput" style="max-width: 420px;"data-aos="fade-down" data-aos-offset="0" data-aos-delay="1000" data-aos-easing="ease-out-back">
@@ -903,69 +837,6 @@
         </div>
       </section>
 
-      <!--section class="container bg-secondary position-relative pt-5" id="scroll">
-        <div class="text-center pb-3 pt-2 pt-sm-3 pt-md-4 pt-xl-5 mx-auto mb-sm-2 mb-md-3 mb-lg-4" style="max-width: 766px;" data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-out-back">
-          <h2 class="h1">لماذا نحن</h2>
-          <p class="mb-2 mb-md-0">نلتزم بتقديم الأفضل لضمان نجاح عملائنا، ولأنهم يستحقون الأفضل منا دومًا فنحن نعمل بجد لتقديم كافة سبل الدعم التي تضمن نجاحات متوالية تتحدى أي عقبات قد تعيق سير العمل بالشكل الأمثل</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-6 order-lg-2 order-2">
-            <div class="timeline-point">
-              <div class="row justify-content-center d-flex">
-                <div class="col-lg-2 d-flex">
-                  <div class="d-flex">
-                    <img class="timeline-point-img" width="50" height="50" src="assets/img/timeline-bar/compass-white-150x150.png" srcset="assets/img/timeline-bar/compass-white-150x150.png 150w, assets/img/timeline-bar/compass-white-300x300.png 300w, assets/img/timeline-bar/compass-white.png 512w" sizes="(max-width: 150px) 100vw, 150px">
-                  </div>
-                </div>
-                <div class="col-lg-10 d-block">
-                  <h2 class="pb-2 pb-sm-0 text-gradient">خدمات تتخطى الحدود</h2>
-                  <p class="d-block pb-3 pb-lg-4 mb-1 fs-custom">هي منصة تجمع بين خمسة منشآت متحالفة من مقدمي الخدمات والعملاء على وجه الخصوص المنشات </p>
-                </div>
-              </div>
-            </div>
-            <style>
-              .elementor-24279 .elementor-element.elementor-element-4c5cdf5:not(.elementor-motion-effects-element-type-background), .elementor-24279 .elementor-element.elementor-element-4c5cdf5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#242424;}
-            </style>
-            <div class="progress timeline-bar" style="position: absolute; width: 100%; bottom: 37%; transform: rotate(90deg) translateY(0) !important; left:0;">
-              <div class="progress-bar fw-semibold bg-dark line-2 d-none d-md-flex" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="col-lg-5 order-lg-1 order-1 d-flex">
-            <div class="d-block">
-              <p class="d-block pb-0 mb-0 fs-custom">هي منصة تجمع بين خمسة منشآت متحالفة من مقدمي الخدمات والعملاء على وجه الخصوص المنشات </p>
-              <img class="timeline-img" src="assets/img/slider/02.png">
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-6 order-lg-2 order-2">
-            <div class="timeline-point">
-              <div class="row justify-content-center d-flex">
-                <div class="col-lg-2 d-flex">
-                  <img class="timeline-point-img d-flex" width="50" height="50" src="assets/img/timeline-bar/compass-white-150x150.png" srcset="assets/img/timeline-bar/compass-white-150x150.png 150w, assets/img/timeline-bar/compass-white-300x300.png 300w, assets/img/timeline-bar/compass-white.png 512w" sizes="(max-width: 150px) 100vw, 150px">
-                </div>
-                <div class="col-lg-10 d-block">
-                  <h2 class="pb-2 pb-sm-0 text-gradient">ماذا تعرف عنا؟</h2>
-                  <p class="d-block pb-3 pb-lg-4 mb-1 fs-custom">هي منصة تجمع بين خمسة منشآت متحالفة من مقدمي الخدمات والعملاء على وجه الخصوص المنشات </p>
-                </div>
-              </div>
-            </div>
-            <style>
-              .elementor-24279 .elementor-element.elementor-element-4c5cdf5:not(.elementor-motion-effects-element-type-background), .elementor-24279 .elementor-element.elementor-element-4c5cdf5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#242424;}
-            </style>
-            <div class="progress timeline-bar" style="position: absolute; width: 100%; bottom: 37%; transform: rotate(90deg) translateY(0) !important; left:0;">
-              <div class="progress-bar fw-semibold bg-dark line-2 d-none d-md-flex"  role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-          <div class="col-lg-5 order-lg-1 order-1 d-flex">
-            <div class="d-block">
-              <p class="d-block pb-0 mb-0 fs-custom">هي منصة تجمع بين خمسة منشآت متحالفة من مقدمي الخدمات والعملاء على وجه الخصوص المنشات </p>
-              <img class="timeline-img" src="assets/img/slider/02.png">
-            </div>
-          </div>
-        </div>
-      </section-->
       <!-- Services grid -->
       <section class="container position-relative bg-secondary pt-3">
         <div class="text-center pb-3 pt-2 pt-sm-3 pt-md-4 pt-xl-5 mx-auto mb-sm-2 mb-md-3 mb-lg-4" style="max-width: 766px;" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-out-back">
@@ -1171,7 +1042,7 @@
       </section>
       
       <!-- Video showreel -->
-      <section class="container pt-5 mt-lg-3 mt-xl-4 mt-xxl-5">
+      <section class="container pt-5 mt-lg-3 mt-xl-4 mt-xxl-5 pb-2 pb-md-0">
         <div class="row text-center text-md-start pb-3 pt-1 pt-sm-3 pt-md-4 pt-xl-5 mt-lg-2 mt-xl-0 mb-3 mb-lg-4" data-aos="fade-down" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease-out-back" data-aos-delay="150">
           <div class="col-md-6">
             <h2 class="h1 mb-md-0 pb-2 text-gradient">وراء كل طلبية قصة؟</h2>
@@ -1192,297 +1063,14 @@
         </div>
       </section>
 
-      
-      <!-- ======= Location Section ======= -->
-      <!-- <section class="container pt-5 pb-md-3 pb-5 mb-md-2 mb-lg-1 mb-xl-3 mb-xxl-4" data-aos="fade-down" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease-out-back" data-aos-delay="150">
-        <div class="row text-center text-md-start pb-3 pt-1 pt-sm-3 pt-md-4 pt-xl-5 mt-lg-2 mt-xl-0 mb-3 mb-lg-4">
-          <div class="col-md-6">
-            <h2 class="h1 mb-md-0 pb-2 text-gradient">آليات العمل المستخدمة</h2>
-          </div>
-          <div class="col-md-6 pt-2">
-            <p class="mb-0">آليات عملنا المستخدمة في مؤسستنا منظمة ودقيقة تضمن لك تجربة فائقة الجودة ونجاحاً مستداماً وكفاءة على أعلى مستوى.</p>
-          </div>
-        </div>
-        <div class="card border-0 bg-primary bg-opacity-50 position-relative overflow-hidden p-5 smooth-shadow-md">
-          <svg class="d-block position-absolute top-0 end-0 text-secondary opacity-50 text-dark-mode-dark" width="125" height="99" viewBox="0 0 125 99" fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg">
-            <path d="M-17.819-8.269c-.305.249-.567.498-.814.791-1.018 1.172-1.585 2.695-2.08 4.204-4.145 12.479-9.482 29.206-10.223 42.652-.553 10.063 2.516 19.232 8.885 27.317 9.729 12.347 18.367 9.096 32.037 9.887 16.084.937 25.391 8.173 39.497 16.156 13.103 7.426 27.427 6.943 39.163-1.128 13.859-9.521 26.045-30.056 30.495-46.387 4.494-16.493 8.071-34.611.247-51.865-12.273-27.053-55.726-15.233-74.457-11.996-8.827 1.523-17.131 5.829-26.176 6.708-5.73.556-11.547-.527-17.349-.059-5.25.425-14.935.234-19.225 3.72z"></path>
-            <path d="M-3.201 8.561c-.582.923-1.003 1.992-1.28 3.105-2.414 9.594-4.974 20.77-4.552 29.792.175 3.589.945 7.016 2.458 10.282 1.323 2.871 3.127 5.595 5.395 8.188 7.329 8.378 13.801 6.459 23.631 7.162 11.721.849 18.862 5.727 29.143 10.795 9.467 4.658 19.705 3.882 28.285-2.402 10.049-7.323 18.571-22.058 21.581-33.937 3.054-12.054 5.104-25.134-.742-37.438-9.074-19.188-39.54-11.981-53.836-9.828-7.199 1.084-14.979 4.409-22.468 5.463-2.429.337-4.683.483-6.588.469-2.516.234-5.002.601-7.358 1.435C6.499 3.054-.074 4.474-2.692 7.829c-.204.234-.349.483-.509.732z"></path>
-            <path d="M12.237 24.598c-.189.63-.407 1.304-.48 2.007-.625 6.781-.509 12.23 1.12 16.932.625 1.787 1.44 3.545 2.763 5.288 1.134 1.494 2.487 2.944 4.043 4.35 4.915 4.423 9.249 3.823 15.226 4.423 7.344.747 12.303 3.296 18.803 5.419 5.831 1.904 11.983.806 17.393-3.662C77.329 54.2 82.186 45.28 83.771 37.854c1.6-7.617 2.109-15.658-1.745-23.025-5.904-11.293-23.355-8.774-33.229-7.66-5.555.63-12.826 3.047-18.774 4.233-2.283.454-4.203.791-5.41.894a14.19 14.19 0 0 0-5.148 2.973c-2.69 2.432-6.151 5.39-7.082 8.656-.058.234-.087.469-.146.674z"></path>
-            <path d="M31.449 24.407c-3.548 2.915-5.337 11.454-3.766 16.243 2.021 6.166 4.77 4.409 10.194 5.258 9.962 1.567 16.666 6.796 24.475-2.666 8.725-10.56 1.251-23.538-11.605-23.142-5.831.176-17.756 3.676-19.298 4.306z"></path>
-          </svg>
-          <svg class="d-block position-absolute bottom-0 start-0 text-secondary opacity-50 text-dark-mode-dark" width="140" height="86" viewBox="0 0 140 86" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.56155 84.728C3.89813 95.3168 8.77193 105.696 14.3618 114.354C31.1345 140.282 61.2598 159.203 93.1024 149.868C115.683 143.25 136.909 120.078 146.906 99.6379C157.262 78.4816 157.784 62.3169 149.314 40.7686C138.656 13.647 114.088 -10.3284 84.9291 4.90565C72.6616 11.3094 61.6112 19.2912 48.9043 25.2334C37.333 30.6501 22.7611 33.4689 12.9718 42.2129C0.148055 53.665 -1.80519 69.4006 1.56155 84.728Z"></path>
-          </svg>
-          <div class="card-body px-lg-0 steps steps-horizontal-md steps-hoverable steps-center position-relative overflow-auto mx-0 p-0">
-
-            <div class="step mx-0" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease" data-aos-delay="100">
-              <div class="step-number rounded-circle border border-5">
-                <div class="step-number-inner">01</div>
-              </div>
-              <div class="step-body">
-                <h6 class="mb-2 fs-sm text-light">التسجيل</h6>
-              </div>
-            </div>
-
-            <div class="step" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease" data-aos-delay="200">
-              <div class="step-number rounded-circle border border-5">
-                <div class="step-number-inner">02</div>
-              </div>
-              <div class="step-body">
-                <h6 class="mb-2 fs-sm text-light">دفع الرسوم</h6>
-              </div>
-            </div>
-
-            <div class="step" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease" data-aos-delay="300">
-              <div class="step-number rounded-circle border border-5">
-                <div class="step-number-inner">03</div>
-              </div>
-              <div class="step-body">
-                <h6 class="mb-2 fs-sm text-light">طلب الخدمة</h6>
-              </div>
-            </div>
-
-            <div class="step" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease" data-aos-delay="400">
-              <div class="step-number rounded-circle border border-5">
-                <div class="step-number-inner">04</div>
-              </div>
-              <div class="step-body">
-                <h6 class="mb-2 fs-sm text-light">مراجعة الطلب</h6>
-              </div>
-            </div>
-
-            <div class="step" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease" data-aos-delay="500">
-              <div class="step-number rounded-circle border border-5">
-                <div class="step-number-inner">05</div>
-              </div>
-              <div class="step-body">
-                <h6 class="mb-2 fs-sm text-light">تعيين موفر الخدمة</h6>
-              </div>
-            </div>
-
-            <div class="step" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease" data-aos-delay="600">
-              <div class="step-number rounded-circle border border-5">
-                <div class="step-number-inner">06</div>
-              </div>
-              <div class="step-body">
-                <h6 class="mb-2 fs-sm text-light">تسليم الخدمة</h6>
-              </div>
-            </div>
-
-            <div class="step" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease" data-aos-delay="700">
-              <div class="step-number rounded-circle border border-5">
-                <div class="step-number-inner">07</div>
-              </div>
-              <div class="step-body">
-                <h6 class="mb-2 fs-sm text-light">تقييم الطلب</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Pricing (Carousel on screens < 992px) -->
-      <!--section class="pt-3 pt-sm-2 pt-md-3 pt-lg-4">
-        <div class="text-center pb-3 pt-2 pt-sm-3 pt-md-4 pt-xl-5 mx-auto mb-sm-2 mb-md-3 mb-lg-4" style="max-width: 766px;" data-aos="fade-down" data-aos-duration="600" data-aos-offset="150" data-aos-easing="ease-out-back">
-          <h2 class="h1 pb-2 text-gradient">تفاصيل وأسعار الشحن</h2>
-          <p class="mb-2 mb-md-0 fs-custom">مع دن تسوّق من أي موقع، أرسل رابط المنتج وتابع شحنتك خطوة بخطوة وإحنا نوصلها لك بسرعة، أمان، ودقة. استمتع بخدمات ذكية، دعم سريع، وتجربة تخلّي الشحن أسهل من أي وقت مضى!</p>
-        </div>
-        <div class="container py-2 mt-lg-3 mt-xl-4 mt-xxl-5 mb-lg-2 mb-xl-4">
-          <div class="flex-nowrap pb-4 pt-3 swiper" data-swiper-options='
-            {
-              "spaceBetween": 24,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "clickable": true
-              },
-              "initialSlide": 1,
-              "breakpoints": {
-                "576": { "slidesPerView": 2 },
-                "992": { "slidesPerView": 3 }
-              }
-            }
-          '>
-            <div class="swiper-wrapper mb-0 mb-lg-5">
-              <div class="swiper-slide" style="min-width: 19rem;">
-                <div class="card border-0 h-100 py-lg-3 smooth-shadow-sm" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="600" data-aos-delay="350" data-aos-easing="ease-out-back">
-                  <div class="card-body w-100 mx-auto" style="max-width: 24rem;">
-                    <div class="d-flex align-items-center border-bottom pb-4 mb-4" data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="350">
-                      <div class="bg-info rounded flex-shrink-0 p-2">
-                        <img class="d-block m-1" src="assets/img/svg-pricing/starter.svg" width="44" alt="Icon" loading="lasy">
-                      </div>
-                      <div class="ps-3">
-                        <h3 class="h4 text-info mb-0">التوفيري</h3>
-                        <div class="d-flex align-items-end">
-                          <span class="h5 mb-1 me-1">SR</span>
-                          <span class="h2 mb-0">69</span>
-                          <span class="h5 mb-1 ms-1">للكرتون</span>
-                        </div>
-                        <div class="d-block mt-1">
-                          <span class="h5 text-danger mb-1">الأبعاد 60*60*60</span>
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="list-unstyled mb-1 pb-4">
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        خدمة شحن بسعر توفيري ومناسب 
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        حفظه في بيئة آمنة بعيدا عن الخطر
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        توصيل المنتج خلال ثلاثة أسابيع
-                      </li>
-                      <li class="d-flex text-body-secondary pb-1 mb-2">
-                        <i class="ai-cross lead fs-xl opacity-80 me-2"></i>
-                        إمكانية استرجاع الطلب مجانا
-                      </li>
-                      <li class="d-flex text-body-secondary pb-1 mb-2">
-                        <i class="ai-cross lead fs-xl opacity-80 me-2"></i>
-                        توصيل سريع للمنتج بدون تأخير
-                      </li>
-                      <li class="d-flex pb-1 mb-lg-4 mb-5">
-                      </li>
-                    </ul>
-                    <button class="btn btn-outline-primary w-100" type="button">طلب الخدمة</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide swiper-slide-active active" style="min-width: 19rem;">
-                <div class="card border-primary h-100 py-lg-3 z-10 smooth-shadow-md" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="600" data-aos-delay="250" data-aos-easing="ease-out-back">
-                  <div class="card-body w-100 mx-auto" style="max-width: 24rem;">
-                    <div class="d-flex align-items-center border-bottom pb-4 mb-4" data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="250">
-                      <div class="bg-primary rounded flex-shrink-0 p-2">
-                        <img class="d-block m-1" src="assets/img/svg-pricing/business.svg" width="44" alt="Icon" loading="lasy">
-                      </div>
-                      <div class="ps-3">
-                        <h3 class="h4 text-primary mb-0">شي إن</h3>
-                        <div class="d-flex align-items-end">
-                          <span class="h2 mb-0">مجانية</span>
-                        </div>
-                        <div class="d-block mt-1">
-                          <span class="h5 text-danger mb-1 ms-1">الأبعاد غير محدود</span>
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="list-unstyled mb-1 pb-4">
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        خدمة شحن مجانية بدون مقابل
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        خدمات مسك الدفاتر السحابية
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        توصيل المنتج خلال ثلاثة أسابيع
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        إمكانية استرجاع الطلب مجانا
-                      </li>
-                      <li class="d-flex text-body-secondary pb-1 mb-2">
-                        <i class="ai-cross lead fs-xl opacity-80 me-2"></i>
-                        توصيل سريع للمنتج بدون تأخير
-                      </li>
-                    </ul>
-                    <button class="btn btn-primary w-100" type="button">طلب الخدمة</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide" style="min-width: 19rem;">
-                <div class="card border-0 h-100 py-lg-3 smooth-shadow-sm" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="600" data-aos-delay="350" data-aos-easing="ease-out-back">
-                  <div class="card-body w-100 mx-auto" style="max-width: 24rem;">
-                    <div class="d-flex align-items-center border-bottom pb-4 mb-4" data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="350">
-                      <div class="bg-warning rounded flex-shrink-0 p-2">
-                        <img class="d-block m-1" src="assets/img/svg-pricing/premium.svg" width="44" alt="Icon" loading="lasy">
-                      </div>
-                      <div class="ps-3">
-                        <h3 class="h4 text-warning mb-0">اكسترا كير</h3>
-                        <div class="d-flex align-items-end">
-                          <span class="h5 mb-1 me-1">SR</span>
-                          <span class="h2 mb-0">250</span>
-                          <span class="h5 mb-1 ms-1">للكرتون</span>
-                        </div>
-                        <div class="d-block mt-1">
-                          <span class="h5 text-danger mb-1">الأبعاد 60*60*60</span>
-                        </div>
-                      </div>
-                    </div>
-                    <ul class="list-unstyled mb-1 pb-4">
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        خدمة شحن مناسبة للأجهزة المحمولة
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        ضمان شامل ضد الكسر أو الخدش
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        حفظه في بيئة آمنة بعيدا عن الخطر
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        تغليف إحترافي للمنتج مضاد للماء
-                      </li>
-                      <li class="d-flex pb-1 mb-2">
-                        <i class="ai-check fs-xl mt-1 me-2"></i>
-                        توصيل سريع للمنتج بدون تأخير
-                      </li>
-                      <li class="d-flex text-body-secondary pb-1 mb-2">
-                        <i class="ai-cross lead fs-xl opacity-80 me-2"></i>
-                        إمكانية استرجاع الطلب مجانا
-                      </li>
-                      <li class="d-flex pb-1 mb-lg-4 mb-5">
-                      </li>
-                    </ul>
-                    <button class="btn btn-outline-primary w-100" type="button">طلب الخدمة</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <div class="swiper-pagination position-relative bottom-0 mt-2 pt-4 d-lg-none"></div>
-          </div>
-        </div>
-      </section-->
-
       <!-- Pricing (Carousel on screens < 992px) -->
       <section class="pt-3 pt-sm-2 pt-md-3 pt-lg-4">
         <div>
-          <div class="text-center pt-2 pt-sm-3 pt-md-4 pt-xl-5 mx-auto" style="max-width: 766px;" data-aos="fade-down" data-aos-duration="600" data-aos-offset="150" data-aos-easing="ease-out-back">
+          <div class="text-center pt-5 mx-auto" style="max-width: 766px;" data-aos="fade-down" data-aos-duration="600" data-aos-offset="150" data-aos-easing="ease-out-back">
             <h2 class="h1 pb-4 text-gradient">تفاصيل وأسعار الشحن</h2>
-            <!--p class="mb-2 mb-md-0 fs-custom">مع دن تسوّق من أي موقع، أرسل رابط المنتج وتابع شحنتك خطوة بخطوة وإحنا نوصلها لك بسرعة، أمان، ودقة. استمتع بخدمات ذكية، دعم سريع، وتجربة تخلّي الشحن أسهل من أي وقت مضى!</p-->
+            <p class="mb-2 mb-md-0 fs-custom">مع دن تسوّق من أي موقع، أرسل رابط المنتج وتابع شحنتك خطوة بخطوة وإحنا نوصلها لك بسرعة، أمان، ودقة. استمتع بخدمات ذكية، دعم سريع، وتجربة تخلّي الشحن أسهل من أي وقت مضى!</p>
           </div>
-          <div class="price-switch-wrapper mt-sm-n4">
-            <div class="text-center pb-3 mb-sm-2 mb-md-3 mb-lg-4" data-bs-toggle="price" data-aos="fade-down" data-aos-duration="600" data-aos-offset="100" data-aos-easing="ease-out-back">
-              <div class="form-check form-check-inline px-2 ps-4 ps-md-5">
-                <input class="form-check-input btn-check" type="radio" id="box30" name="price" value="30*30*30" data-s30-switch checked>
-                <label class="form-check-label btn btn-outline-secondary text-dark fs-base fw-medium" for="box30">30*30*30</label>
-              </div>
-              <div class="form-check form-check-inline px-2">
-                <input class="form-check-input btn-check" type="radio" id="box40" name="price" value="40*40*40" data-s40-switch>
-                <label class="form-check-label btn btn-outline-secondary text-dark fs-base fw-medium" for="box40">40*40*40</label>
-              </div>
-              <div class="form-check d-inline-flex align-items-end me-sm-n5 ms-4 ms-md-2 ps-5 ps-md-0">
-                <div class="d-inline-flex">
-                  <input class="form-check-input btn-check me-2" type="radio" id="box60" name="price" value="60*60*60" data-s60-switch>
-                  <label class="form-check-label btn btn-outline-secondary text-dark fs-base fw-medium" for="box60">60*60*60</label>
-                </div>
-                <div class="d-inline-block text-center ps-3 ms-sm-4">
-                  <div class="text-danger fs-sm fw-bold mb-sm-1">توفير 20%</div>
-                  <svg class="text-danger ms-n1 ms-md-n4 d-block" style="transform: scaleX(-1);" width="52" height="38" viewBox="0 0 52 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50.5002 1C50.3336 5.33333 48.5 13 44.0002 20.5C39.5005 28 29.0002 32.5 28.5002 23C28.0002 13.5 39.5002 7 36.5002 14.5C33.5002 22 18.5 35.5 4 30" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-                    <path d="M3.83039 29.8565C6.35946 29.7566 8.93618 29.122 11.2178 28.1747L11.2178 28.1748L11.2196 28.1739C11.5476 28.0299 11.7182 27.6503 11.5867 27.3359C11.448 26.9871 11.0624 26.8028 10.7213 26.9517C7.91141 28.0931 4.64686 28.7829 1.62704 28.4553L1.62706 28.4551L1.62094 28.4549C1.27015 28.4384 0.944127 28.6914 0.902297 29.0451L0.902167 29.045L0.901827 29.0501C0.896722 29.1266 0.902407 29.2007 0.917743 29.2707C0.94057 29.4967 1.07932 29.7124 1.30195 29.8067C4.07984 31.0931 5.87728 34.0754 7.0096 36.882L7.00959 36.882L7.01015 36.8833C7.13957 37.1912 7.5283 37.3687 7.86577 37.2206L7.86579 37.2205C8.19919 37.0741 8.36065 36.6916 8.22031 36.3385L8.22006 36.3379C7.2736 34.0027 5.84935 31.53 3.83039 29.8565Z" fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
+          <div class="mt-sm-n4">
             <div class="container py-2 mt-lg-3 mt-xl-4 mt-xxl-5 mb-lg-2 mb-xl-4">
               <div class="flex-nowrap pb-4 pt-3 swiper" data-swiper-options='
                 {
@@ -1510,9 +1098,7 @@
                           <div class="ps-3">
                             <h3 class="h4 text-info mb-0">الإنطلاقة</h3>
                             <div class="d-flex align-items-end">
-                              <span class="h2 mb-0" data-s30-price>7</span>
-                              <span class="h2 mb-0 d-none" data-s40-price>8</span>
-                              <span class="h2 mb-0 d-none" data-s60-price>9</span>
+                              <span class="h2 mb-0">7</span>
                               <span class="h5 mb-2 ms-2">
                                 <svg class="d-block" width="30" height="30" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
@@ -1582,9 +1168,7 @@
                           <div class="ps-3">
                             <h3 class="h4 text-primary mb-0">النمو</h3>
                             <div class="d-flex align-items-end">
-                              <span class="h2 mb-0" data-s30-price>5</span>
-                              <span class="h2 mb-0 d-none" data-s40-price>6</span>
-                              <span class="h2 mb-0 d-none" data-s60-price>7</span>
+                              <span class="h2 mb-0">5</span>
                               <span class="h5 mb-2 ms-2">
                                 <svg class="d-block" width="30" height="30" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
@@ -1652,9 +1236,7 @@
                           <div class="ps-3">
                             <h3 class="h4 text-warning mb-0">الإحترافية</h3>
                             <div class="d-flex align-items-end">
-                              <span class="h2 mb-0" data-s30-price>4</span>
-                              <span class="h2 mb-0 d-none" data-s40-price>5</span>
-                              <span class="h2 mb-0 d-none" data-s60-price>6</span>
+                              <span class="h2 mb-0">4</span>
                               <span class="h5 mb-2 ms-2">
                                 <svg class="d-block" width="30" height="30" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
@@ -1717,7 +1299,6 @@
             </div>
         </div>
       </section>
-
       
       <!-- Card Register Now -->
       <section class="container py-1 pb-5 pb-md-2 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
@@ -1887,7 +1468,7 @@
                 <img width="200" class="d-none d-dark-mode-block" src="assets/app-icons/logo-dark.png" loading="lasy">
               </span>
             </a>
-            <p class="text-body fs-sm pb-2 pb-md-3 mb-3 arabicText" data-kashida="true">شركة احترافية في خدمات الشحن والأولى في اليمن، نقدم خدمات لربط المتجر الإلكترونية بخدمة الشحن والحلول اللوجستية المتكاملة</p>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3 arabicText">شركة احترافية في خدمات الشحن والأولى في اليمن، نقدم خدمات لربط المتجر الإلكترونية بخدمة الشحن والحلول اللوجستية المتكاملة</p>
             <div class="d-flex gap-3">
               <a class="btn btn-icon btn-sm btn-secondary btn-whatsapp rounded-circle" href="https://wa.me/967780050504" target="_blank" aria-label="Whatsapp">
                 <i class="ai-whatsapp"></i>
@@ -2091,47 +1672,6 @@
 				}
 			}
 		});
-      // var scrolltrigger2 = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: ".scrollTrigger2",
-      //     scrub: true,
-      //     pin: true,
-      //     start: "top top",
-      //     end: "+=100%",
-      //   },
-      //   scaleX: 0, 
-      //   transformOrigin: "left center", 
-      //   ease: "none"
-      // })
-      // scrolltrigger2.from(".scrollTrigger2 .tttt", {scale: 0.3, rotation:45, autoAlpha: 0, ease: "power2"})
-      //   .from(".line-2", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
-      //   .to(".scrollTrigger2"), {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0;
-      
-
-
-      // possible solution for old iOS bugs that don't display things inside an iframe correctly. Create a --full-height CSS variable and use it instead of height: 100%
-      // function readHeight() {
-      // 		if (ScrollTrigger.isScrolling()) {
-      // 			console.log("wait until end...");
-      // 			ScrollTrigger.addEventListener("scrollEnd", readHeight);
-      // 		} else {
-      // 			ScrollTrigger.removeEventListener("scrollEnd", readHeight);
-      // 			window.removeEventListener("resize", readHeight);
-      // 			let scrollFunc = ScrollTrigger.getScrollFunc(window),
-      // 				scrollProgress = scrollFunc() / ScrollTrigger.maxScroll(window),
-      // 				docStyle = document.documentElement.style,
-      // 				bodyStyle = document.body.style;
-      // 			bodyStyle.overflow = "auto";
-      // 			docStyle.setProperty("--full-height", "100%");
-      // 			docStyle.setProperty("--full-height", window.innerHeight + "px");
-      // 			bodyStyle.overflow = "unset";
-      // 			setTimeout(function() {
-      // 				window.addEventListener("resize", readHeight);
-      // 			}, 500);
-      // 			ScrollTrigger.refresh(true);
-      // 			scrollFunc(scrollProgress * ScrollTrigger.maxScroll(window));
-      // 		}
-      // 	}
     </script>
 
     <!-- Bootstrap + Theme scripts -->

@@ -9,34 +9,10 @@
   color: rgba(var(--ar-light-rgb), var(--ar-text-opacity)) !important;
 }
 
-/*<!-- Page loading spinner styles -->*/
-/*.animation-blink {
-    -webkit-animation: blink 1.8s infinite;
-    animation: blink 1.8s infinite;
-  }
-  @-webkit-keyframes blink {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+/*<!-- Paragraph arabicText styles -->*/
+.arabicText {text-align: justify !important; text-align-last: right;}
 
-  @keyframes blink {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }*/
+/*<!-- Page loading spinner styles -->*/
   .animation-blink {
     animation: jitterMoveScaleIn 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     display: inline-block;
@@ -374,7 +350,7 @@
     height: 15px !important;
   }
 
-
+/*<!-- Steps Order Tracking for offcanvas style -->*/
 .ar-steps {width:100%;}
 
 .ar-steps .ar-step {
