@@ -275,12 +275,12 @@
                   <div class="me-3 me-sm-4">
                     <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">تاريخ الطلب</div>
                     <div class="d-sm-none fs-sm text-body-secondary mb-2">الطلب</div>
-                    <div class="fs-sm fw-medium text-dark">أكتوبر 11, 2025</div>
+                    <div class="fs-sm fw-medium text-dark">أكتوبر 17, 2025</div>
                   </div>
                   <div class="me-3 me-sm-4">
                     <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">موعد التسليم</div>
                     <div class="d-sm-none fs-sm text-body-secondary mb-2">التسليم</div>
-                    <div class="fs-sm fw-medium text-dark">أكتوبر 27, 2023</div>
+                    <div class="fs-sm fw-medium text-dark">أكتوبر 27, 2025</div>
                   </div>
                 </div>
               </a>
@@ -294,7 +294,7 @@
                         <td class="border-0 py-1 px-0">
                           <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">رقم الطلبية</div>
                           <div class="d-sm-none fs-sm text-body-secondary mb-2">رقم الطلب</div>
-                          <div class="fs-sm fw-medium text-dark">10114</div>
+                          <div id="orderNumber1" class="fs-sm fw-medium text-dark">#####</div>
                         </td>
                         <td class="border-0 py-1 px-0">
                           <div class="fs-sm text-body-secondary mb-2">عدد القطع</div>
@@ -341,7 +341,7 @@
                       <div class="fs-sm">تريم - الفرع الرئيسي</div>
                     </div>
                     <div class="col-md-4 mb-1 mb-md-0">
-                      <a class="btn btn-sm btn-primary w-100 w-md-auto" href="https://wa.me/966559559551" target="_blank">
+                      <a class="btn btn-sm btn-primary w-100 w-md-auto" href="https://wa.me/967780050504?text=مرحبًا%20أرغب%20في%20معرفة%20تفاصيل%20الطلب%20الخاص%20بي" target="_blank">
                         <i class="ai-phone-call me-2 ms-n1"></i>
                         التواصل مع المندوب
                       </a>
@@ -363,7 +363,7 @@
           <div class="d-flex align-items-center justify-content-center mb-3 mb-sm-0 order-1">
             <span class="d-none d-sm-block fs-lg me-2">الطلب:</span>
             <span class="d-sm-none fs-xl me-2">رقم الطلب:</span>
-            <span class="h5 mb-0">10114</span>
+            <span id="orderNumber2" class="h5 mb-0">#####</span>
           </div>
           <div class="input-group input-group-sm border-dashed me-sm-4 me-md-5 order-0">
             <input class="form-control text-uppercase" type="number" placeholder="إدخال رقم طلبية آخرى">
@@ -564,13 +564,39 @@
 
               <p class="fs-lg text-center text-lg-start pb-xl-2 mx-auto mx-lg-0 mb-5 arabicText d-none d-md-block" style="max-width: 420px;" data-aos="fade-down" data-aos-delay="800" data-aos-easing="ease-out-back">هي شركة احترافية في خدمات الشحن والأولى في اليمن، نتميز بتقديم خدمات لربط المتاجر الإلكترونية بخدمة الشحن والحلول اللوجستية المتكاملة.</p>
               <div class="mb-5 mb-md-0"></div>
-              <div class="input-group mx-auto mx-lg-0 row" id="searchOrderInput" style="max-width: 420px;"data-aos="fade-down" data-aos-offset="0" data-aos-delay="1000" data-aos-easing="ease-out-back">
+              <form class="input-group mx-auto mx-lg-0 row needs-validation" novalidate id="searchOrderInput" style="max-width: 420px;"data-aos="fade-down" data-aos-offset="0" data-aos-delay="1000" data-aos-easing="ease-out-back">
                 <span class="input-group-text text-body-secondary col-1 ps-1">
                   <i class="ai-dropbox"></i>
                 </span>
-                <input id="searchOrder" class="form-control col-6 col-lg-7 ps-1" type="number" placeholder="رقم التتبع الخاص بك">
-                <a href="#orderOffcanvas" class="btn btn-primary col-5 col-lg-4" data-bs-toggle="offcanvas" data-bs-target="#orderOffcanvas">تتبع الشحنة</a>
-              </div>
+                <input id="searchOrder" class="form-control col-6 col-lg-7 ps-1" type="number" required placeholder="رقم التتبع الخاص بك">
+                <span class="invalid-feedback order-1">أدخل الرقم بشكل صحيح!</span>
+                <button id="trackBtn" type="submit" class="btn btn-primary col-5 col-lg-4">تتبع الشحنة</button>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                    const input = document.getElementById('searchOrder');
+                    const trackBtn = document.getElementById('trackBtn');
+                    const offcanvasElement = document.getElementById('orderOffcanvas');
+
+                    const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
+                    trackBtn.addEventListener('click', function (e) {
+                      e.preventDefault();
+                      const value = input.value.trim();
+                      if (!value) {
+                        input.classList.add('is-invalid');
+                        return;
+                      }
+                      input.classList.remove('is-invalid');
+                      document.getElementById('orderNumber1').textContent = `${value}`;
+                      document.getElementById('orderNumber2').textContent = `${value}`;
+                      bsOffcanvas.show();
+
+                      input.addEventListener('input', function () {
+                        input.classList.remove('is-invalid');
+                      });
+                    });
+                  })
+                </script>
+              </form>
             </div>
           </div>
         </div>
