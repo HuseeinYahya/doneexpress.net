@@ -341,7 +341,7 @@
                       <div class="fs-sm">تريم - الفرع الرئيسي</div>
                     </div>
                     <div class="col-md-4 mb-1 mb-md-0">
-                      <a class="btn btn-sm btn-primary w-100 w-md-auto" href="https://wa.me/967780050504?text=مرحبًا%20أرغب%20في%20معرفة%20تفاصيل%20الطلب%20الخاص%20بي" target="_blank">
+                      <a id="whatsappLink" class="btn btn-sm btn-primary w-100 w-md-auto" href="#" target="_blank">
                         <i class="ai-phone-call me-2 ms-n1"></i>
                         التواصل مع المندوب
                       </a>
@@ -588,6 +588,7 @@
                       input.classList.remove('is-invalid');
                       document.getElementById('orderNumber1').textContent = `${value}`;
                       document.getElementById('orderNumber2').textContent = `${value}`;
+                      document.getElementById('whatsappLink').href = `https://wa.me/967780050504?text=مرحبًا%20أرغب%20في%20معرفة%20المزيد%20عن%20تفاصيل%20الطلب%20الخاص%20بي%20رقم:%20${value}`;
                       bsOffcanvas.show();
 
                       input.addEventListener('input', function () {
