@@ -5,7 +5,6 @@
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-    
     <!-- SEO meta tags -->
     <title>دن للشحن والتجارة الإلكترونية || الرئيسية</title>
     <meta name="theme-color" content="#ED0000">
@@ -16,7 +15,7 @@
     <!-- Favicon / App icons -->
     <link rel="icon" type="image/ico" href="assets/app-icons/icon-32x32.ico">
     <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
-        
+
     <!-- Theme switcher (color modes) -->
     <script src="assets/js/theme-switcher.js"></script>
 
@@ -27,133 +26,12 @@
     <link rel="stylesheet" media="screen" href="assets/vendor/aos/dist/aos.css">
     <link rel="stylesheet" media="screen" href="assets/vendor/leaflet/dist/leaflet.css">
     <link rel="stylesheet" media="screen" href="assets/vendor/glightbox/css/glightbox.min.css">
-
     <!-- Font icons -->
     <link rel="stylesheet" href="assets/icons/icons.min.css">
-
     <!-- Theme styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min-rtl.css">
-
-    <style>
-      [data-bs-theme=dark] .bg-secondary{background-color:var(--ar-secondary-bg) !important}
-      [data-bs-theme=dark] .bg-secondary{background-color:#191c20 !important}
-      .pin-spacer .scrollTrigger div .progress {
-        --ar-progress-bg:#ffffff00 !important;
-        background-color:#ED000000 !important;
-        /*transform: rotate(90deg) scaleX(0.945);*/
-        transform: rotate(90deg) scaleX(1.25) !important;
-        border-radius: 0 !important;
-        height: 15px !important;
-        }
-        @media(max-width: 768px){
-          .pin-spacer .scrollTrigger div .progress {
-            --ar-progress-bg:#ffffff00 !important;
-            background-color:#ED000000 !important;
-            transform: unset !important;
-            height: 25px !important;
-          }
-          [data-bs-theme=dark] .progress-bar.bg-dark:not([data-bs-theme=light]) {background-color: rgba(var(--ar-primary-rgb), var(--ar-bg-opacity)) !important;}
-          .bg-dark {background-color: rgba(var(--ar-primary-rgb), var(--ar-bg-opacity)) !important}
-        }
-    </style>
-    <style>
-      .timeline-point-img{
-        position: sticky;
-        top: 40vh;
-        right: 0%;
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-      }
-      .timeline-img {
-			display: block;
-			margin: 1.5rem auto 0 auto;
-			max-width: 565px;
-			width: 100%;
-			border-radius: 1rem;
-		}
-      .timeline-point, .timeline-left {
-			position: sticky;
-			top: 50vh;
-		}
-		.progress-bar:not(~.scrollTrigger) {
-			background: linear-gradient(0deg, rgba(255,167,76,1) 0%, rgba(177,108,234,1) 5%, rgba(228,99,149,1) 35%, rgba(254,118,95,1) 70%, rgba(255,167,76,1) 100%) !important;
-      position: fixed;
-			transform: translateX(-50%);
-			width: 5px;
-			z-index: 1;
-			border-radius: 4px;
-      overflow: hidden;
-      right: 50%;
-      object-fit: cover;
-  }
-		.bar-container {
-			position: absolute;
-			left: calc(50% - 10%/2);
-			top: 0%;
-			height: 100%;
-		}
-		@media(max-width:1024px) {
-			.bar-container {
-				left: calc(50% - 10%/2);
-			}
-		}
-		@media(max-width:767px) {
-			.bar-container {
-				left: 0%;
-			}
-		}
-		.past .progress-bar {
-			height: 100% !important;
-		}
-    </style>
-    
     <!-- Customizer generated styles -->
     <style id="customizer-styles"></style>
-    
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading')
-          preloader.classList.remove('active')
-          setTimeout(function () {
-            preloader.remove()
-          }, 1500)
-        }
-      })()
-    </script>
-    <style>
-      .fixed-top{position:fixed;top:0;right:0;left:0;width:100%;z-index:1030;}
-      .fixed-top.scrolled-down{transform:translateY(-100%);transition:all 0.3s ease-in-out}
-      .fixed-top.scrolled-up{transform:translateY(0);transition:all 0.3s ease-in-out}
-    </style>
-    <script>
-      // DOMContentLoaded(fixed-top)  start
-      document.addEventListener("DOMContentLoaded", function(){
-      el_fixed_top = document.querySelector('.fixed-top');
-      navbar_height = document.querySelector('.navbar').offsetHeight;
-
-      if(el_fixed_top){
-        var last_scroll_top = 0;
-        window.addEventListener('scroll', function() {
-              let scroll_top = window.scrollY;
-              if(scroll_top < last_scroll_top) {
-                  el_fixed_top.classList.remove('scrolled-down');
-                  el_fixed_top.classList.add('scrolled-up');
-              }
-              else {
-                  if (window.scrollY > 80) {
-                      el_fixed_top.classList.remove('scrolled-up');
-                      el_fixed_top.classList.add('scrolled-down');
-                  }
-              }
-              last_scroll_top = scroll_top;
-        });
-      }
-      }); 
-      // DOMContentLoaded(fixed_top)  end
-    </script>
   </head>
 
 
@@ -571,32 +449,6 @@
                 <input id="searchOrder" class="form-control col-6 col-lg-7 ps-1" type="number" required placeholder="رقم التتبع الخاص بك">
                 <span class="invalid-feedback order-1">أدخل الرقم بشكل صحيح!</span>
                 <button id="trackBtn" type="submit" class="btn btn-primary col-5 col-lg-4">تتبع الشحنة</button>
-                <script>
-                  document.addEventListener('DOMContentLoaded', function () {
-                    const input = document.getElementById('searchOrder');
-                    const trackBtn = document.getElementById('trackBtn');
-                    const offcanvasElement = document.getElementById('orderOffcanvas');
-
-                    const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
-                    trackBtn.addEventListener('click', function (e) {
-                      e.preventDefault();
-                      const value = input.value.trim();
-                      if (!value) {
-                        input.classList.add('is-invalid');
-                        return;
-                      }
-                      input.classList.remove('is-invalid');
-                      document.getElementById('orderNumber1').textContent = `${value}`;
-                      document.getElementById('orderNumber2').textContent = `${value}`;
-                      document.getElementById('whatsappLink').href = `https://wa.me/967780050504?text=مرحبًا%20أرغب%20في%20معرفة%20المزيد%20عن%20تفاصيل%20الطلب%20الخاص%20بي%20رقم:%20${value}`;
-                      bsOffcanvas.show();
-
-                      input.addEventListener('input', function () {
-                        input.classList.remove('is-invalid');
-                      });
-                    });
-                  })
-                </script>
               </form>
             </div>
           </div>
@@ -1588,118 +1440,6 @@
     <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
     <script src="assets/vendor/lenis/lenis.min.js"></script>
     <script src="assets/vendor/kashida-js/kashida.js"></script>
-    <script>
-      const lenis = new Lenis()
-      function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-      }
-      requestAnimationFrame(raf)
-
-      document.addEventListener('shown.bs.offcanvas', (e) => {
-        const off = e.target
-        off.setAttribute('data-lenis-prevent', '')
-        off.style.overflowY = 'auto'
-        off.style.webkitOverflowScrolling = 'touch'
-        off.style.touchAction = 'auto'
-        lenis.stop()
-        document.html.style.overflow = 'hidden'
-      })
-
-      document.addEventListener('hidden.bs.offcanvas', (e) => {
-        const off = e.target
-        off.removeAttribute('data-lenis-prevent')
-        off.style.overflowY = ''
-        off.style.touchAction = ''
-        lenis.start()
-        document.html.style.overflow = ''
-      })
-      </script>
-
-
-    <script type="text/javascript">
-      const myClick = document.querySelectorAll('.searchClick')
-      myClick.forEach(el => {
-      const myInput = document.getElementById('searchOrder')
-      const myOrderInput = document.getElementById('searchOrderInput')
-  
-      el.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setTimeout(() => {
-          myInput.focus();
-        }, 1500);
-        myOrderInput.classList.add('blink-border');
-        setTimeout(() => {
-          myOrderInput.classList.remove('blink-border');
-        }, 1500);
-      })})
-    </script>
-    <style>
-      @keyframes bblink {
-        0%   { box-shadow: 0 0 10px 3px #ED0000; }
-        50%  { box-shadow: 0 0 0 0 transparent; }
-        100% { box-shadow: 0 0 10px 3px #ED0000; }
-      }
-    
-      .blink-border {
-        animation: bblink 1s ease-in-out 3; /* مدة الخفقان: 0.5 ثانية × 3 مرات */
-      }
-    </style>
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-      // --- scrollTrigger1 PANEL ---
-      gsap.from(".line-1", {
-        scrollTrigger: {
-          trigger: ".scrollTrigger1",
-          scrub: true,
-          pin: true,
-          start: "top top",
-          end: "+=100%"
-        },
-        scaleX: 0, 
-        transformOrigin: "left center", 
-        ease: "none"
-      });
-
-      // --- scrollTrigger2 PANEL ---
-      gsap.from(".line-2", {
-        scrollTrigger: {
-          trigger: ".scrollTrigger2",
-          scrub: true,
-          pin: true,
-          start: "top top",
-          end: "+=100%"
-        },
-        scaleX: 0, 
-        transformOrigin: "left center", 
-        ease: "none"
-      });
-
-    
-
-		const gProgressBars = document.querySelectorAll('.progress-bar');
-		const gTimelineBars = document.querySelectorAll('.timeline-bar');
-		gProgressBars.forEach((progressBar, index) => {
-			if (!progressBar.closest('.past')) {
-				const timelineBar = gTimelineBars[index];
-				if (timelineBar) {
-					gsap.to(progressBar, {
-						scrollTrigger: {
-							trigger: timelineBar,
-							scroller: 'html',
-							start: 'top 50%',
-							end: 'bottom 50%',
-							scrub: true,
-							markers: false
-						},
-            transformOrigin: "left center", 
-						height: '100%',
-						ease: 'none'
-					});
-				}
-			}
-		});
-    </script>
 
     <!-- Bootstrap + Theme scripts -->
     <script src="assets/js/theme.min.js"></script>
