@@ -20,6 +20,7 @@
     <script src="assets/js/theme-switcher.js"></script>
 
     <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/simplebar/dist/simplebar.min.css">
     <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" media="screen" href="assets/vendor/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
@@ -45,6 +46,12 @@
         <img class="img-fluid animation-blink d-none d-dark-mode-inline-block" style="width: 300px;" src="assets/app-icons/logo-dark.png" loading="lasy">
       </div>
     </div>
+    <a class="position-fixed shadow smooth-shadow-md p-3 btn btn-icon btn-success btn-whatsapp rounded-circle timer" href="https://wa.me/967780050504" target="_blank" style="bottom: 1rem;right: 1rem; z-index: 1030;opacity:0;transition:transform .25s ease-in-out,opacity .25s;transform:scale(0);">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-whatsapp fs-3"></i>
+    </a>
 
     <!-- Placeholder Offcanvas #orderOffcanvasplaceholder -->
     <div class="offcanvas offcanvas-start py-2 p-sm-2 p-md-3" aria-hidden="true" id="orderOffcanvasplaceholder" tabindex="-1" style="width: 680px;">
@@ -59,7 +66,7 @@
         </div>
       </div>
 
-      <!-- Body -->
+      <!-- Offcanvas Body -->
       <div class="offcanvas-body placeholder-wave">
 
         <div class="align-items-center mt-2 mt-md-2 mb-2 mb-md-0 ar-steps d-flex flex-nowrap">
@@ -153,12 +160,12 @@
                   <div class="me-3 me-sm-4">
                     <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">تاريخ الطلب</div>
                     <div class="d-sm-none fs-sm text-body-secondary mb-2">الطلب</div>
-                    <div class="fs-sm fw-medium text-dark placeholder">###############</div>
+                    <div class="fs-sm fw-medium text-dark placeholder rounded-5">###############</div>
                   </div>
                   <div class="me-3 me-sm-4">
                     <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">موعد التسليم</div>
                     <div class="d-sm-none fs-sm text-body-secondary mb-2">التسليم</div>
-                    <div class="fs-sm fw-medium text-dark placeholder">###############</div>
+                    <div class="fs-sm fw-medium text-dark placeholder rounded-5">###############</div>
                   </div>
                 </div>
               </a>
@@ -172,16 +179,16 @@
                         <td class="border-0 py-1 px-0">
                           <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">رقم الطلبية</div>
                           <div class="d-sm-none fs-sm text-body-secondary mb-2">رقم الطلب</div>
-                          <div id="orderNumber1placeholder" class="fs-sm fw-medium text-dark placeholder">#######</div>
+                          <div id="orderNumber1placeholder" class="fs-sm fw-medium text-dark placeholder rounded-5">#######</div>
                         </td>
                         <td class="border-0 py-1 px-0">
                           <div class="fs-sm text-body-secondary mb-2">عدد القطع</div>
-                          <div class="fs-sm fw-medium text-dark placeholder">####</div>
+                          <div class="fs-sm fw-medium text-dark placeholder rounded-5">####</div>
                         </td>
                         <td class="border-0 py-1 px-0">
                           <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">المبلغ المدفوع</div>
                           <div class="d-sm-none fs-sm text-body-secondary mb-2">المدفوع</div>
-                          <div class="fs-sm fw-medium text-dark placeholder">
+                          <div class="fs-sm fw-medium text-dark placeholder rounded-5">
                             <span>####</span>
                             <span>
                               <svg style="max-width: 20%" width="15" height="15" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -194,7 +201,7 @@
                         <td class="border-0 py-1 px-0">
                           <div class="d-none d-sm-block fs-sm text-body-secondary mb-2">المبلغ المتبقي</div>
                           <div class="d-sm-none fs-sm text-body-secondary mb-2">المتبقي</div>
-                          <div class="fs-sm fw-medium text-dark placeholder">
+                          <div class="fs-sm fw-medium text-dark placeholder rounded-5">
                             <span>####</span>
                             <span>
                               <svg style="max-width: 20%" width="15" height="15" viewBox="0 0 1125 1257" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -212,11 +219,11 @@
                   <div class="row">
                     <div class="col-md-4 mb-4 mb-md-0">
                       <div class="fs-sm fw-medium text-dark mb-1">اسم العميل:</div>
-                      <div class="fs-sm placeholder col-12"></div>
+                      <div class="fs-sm placeholder col-12 rounded-5"></div>
                     </div>
                     <div class="col-md-4 mb-4 mb-md-0">
                       <div class="fs-sm fw-medium text-dark mb-1">نقطة الإستلام:</div>
-                      <div class="fs-sm placeholder col-12"></div>
+                      <div class="fs-sm placeholder col-12 rounded-5"></div>
                     </div>
                     <div class="col-md-4 mb-1 mb-md-0">
                       <a id="whatsappLinkplaceholder" class="btn btn-sm btn-primary w-100 w-md-auto disabled placeholder placeholder-wave" href="#" target="_blank">
@@ -241,7 +248,7 @@
           <div class="d-flex align-items-center justify-content-center mb-3 mb-sm-0 order-1 placeholder-glow">
             <span class="d-none d-sm-block fs-lg me-2">الطلب:</span>
             <span class="d-sm-none fs-xl me-2">رقم الطلب:</span>
-            <span id="orderNumber2placeholder" class="h5 mb-0 placeholder">#####</span>
+            <span id="orderNumber2placeholder" class="h5 mb-0 placeholder rounded-5">#####</span>
           </div>
           <div class="input-group input-group-sm border-dashed me-sm-4 me-md-5 order-0">
             <input class="form-control text-uppercase" type="number" placeholder="إدخال رقم طلبية آخرى">
@@ -278,7 +285,7 @@
         </div>
       </div>
 
-      <!-- Body -->
+      <!-- Body  data-simplebar-->
       <div class="offcanvas-body">
 
         <div class="align-items-center mt-2 mt-md-2 mb-2 mb-md-0 ar-steps d-flex flex-nowrap">
@@ -508,7 +515,7 @@
             </label>
           </div>
 
-          <a class="btn btn-primary btn-sm fs-sm rounded-pill order-lg-3 d-none d-sm-inline-flex" href="#" target="_blank" rel="noopener">
+          <a class="btn btn-primary btn-sm fs-sm rounded-pill order-lg-3 d-none d-sm-inline-flex" href="sign-in.html" rel="noopener">
             <i class="ai-user fs-xl me-2 ms-n1"></i>
             تسجيل الدخول
           </a>
@@ -522,8 +529,8 @@
           <nav class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">خدماتنا</a>
-                <div class="dropdown-menu overflow-hidden p-0 smooth-shadow-sm">
+                <a class="nav-link dropdown-toggle" href="#" id="servicesMenu" data-bs-toggle="dropdown" aria-expanded="false">خدماتنا</a>
+                <div class="dropdown-menu overflow-hidden p-0" id="servicesMenuContent">
                   <div class="d-lg-flex">
                     <div class="mega-dropdown-column pt-1 pt-lg-3 pb-lg-4">
                       <ul class="list-unstyled mb-0">
@@ -548,7 +555,7 @@
                           <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/franchise-system.jpg);"></span>
                         </li>
                         <li class="mb-0">
-                          <a class="dropdown-item" href="#">برنامج مندوبات شي ان</a>
+                          <a class="dropdown-item" href="shein-representatives.html">برنامج مندوبات شي ان</a>
                           <span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0" style="background-image: url(assets/img/megamenu/shein-representatives.jpg);"></span>
                         </li>
                         <li class="mb-0">
@@ -612,7 +619,7 @@
                       </div>
                     </div>
                   </a></li>
-                  <li><a class="dropdown-item" href="https://wa.me/966559559551" target="_blank">
+                  <li><a class="dropdown-item" href="https://wa.me/967780050504" target="_blank">
                     <div class="d-flex align-items-center">
                       <i class="ai-whatsapp fs-3 text-primary"></i>
                       <div class="ms-3">
@@ -628,7 +635,7 @@
               </li>
             </ul>
             <div class="d-sm-none p-3 mt-n3">
-              <a class="btn btn-primary w-100 mb-1" href="#" target="_blank" rel="noopener">
+              <a class="btn btn-primary w-100 mb-1" href="sign-in.html" rel="noopener">
                 <i class="ai-user fs-xl me-2 ms-n1"></i>
                 تسجيل الدخول
               </a>
@@ -1070,7 +1077,7 @@
 
           <!-- Item -->
           <div class="col" data-aos="fade-down" data-aos-offset="100" data-aos-easing="ease-out-back" data-aos-delay="400">
-            <a class="card card-hover card-lifted card-hover-primary border-0 h-100 text-decoration-none smooth-shadow-sm" href="#">
+            <a class="card card-hover card-lifted card-hover-primary border-0 h-100 text-decoration-none smooth-shadow-sm" href="shein-representatives.html">
               <div class="card-body pb-0">
                 <svg class="d-block text-primary mb-4" width="40" height="40" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M442.773,348.629l-58.795-14.677l-2.347-9.451c40.256-7.189,61.099-19.328,62.059-19.904
@@ -1100,7 +1107,7 @@
           </div>
         </div>
         <div class="d-md-flex d-block align-content-center align-items-center justify-content-center" data-aos="fade-down" data-aos-offset="100" data-aos-easing="ease-out-back" data-aos-delay="200">
-          <a class="btn btn-primary rounded-pill mt-5 mx-5 w-auto w-md-25 d-block" type="button" href="#">عرض كل الخدمات</a>
+          <a class="btn btn-primary rounded-pill mt-5 mx-5 w-auto w-md-25 d-block showAllServicesBtn" data-scroll type="button" href="#">عرض كل الخدمات</a>
         </div>
       </section>
 
@@ -1591,10 +1598,10 @@
                 <h4 class="h6 fw-bold pb-lg-1">الروابط الهامة</h4>
                 <ul class="nav flex-column">
                   <li><a class="nav-link fw-normal py-1 px-0" href="#">الرئيسية</a></li>
-                  <li><a class="nav-link fw-normal py-1 px-0" href="#" data-scroll>تتبع الطلبات</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0 searchClick" href="#" data-scroll>تتبع الطلبات</a></li>
                   <li><a class="nav-link fw-normal py-1 px-0" href="https://wa.me/967780050504" target="_blank">شوبينق اند شيب</a></li>
                   <li><a class="nav-link fw-normal py-1 px-0" href="#">خدمة بتّل للشحن</a></li>
-                  <li><a class="nav-link fw-normal py-1 px-0" href="#">مندوبات شي ان</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="services&features.html">مندوبات شي ان</a></li>
                 </ul>
               </div>
               <div class="col mb-4 mb-md-0">
@@ -1641,6 +1648,7 @@
 
 
     <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="assets/vendor/simplebar/dist/simplebar.min.js"></script>
     <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
     <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
     <script src="assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
