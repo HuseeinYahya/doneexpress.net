@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>كشيدة مع تحجيم تلقائي</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      padding: 20px;
+      max-width: 90%;
+      margin: auto;
+    }
+
+    [data-kashida="true"] {
+      line-height: 2;
+      white-space: pre-wrap;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <p data-kashida="true">
+    مرحباً بكم في منصتنا التعليمية الحديثة لتعلم البرمجة باللغة العربية الفصيحة والمتميزة والمفتوحة للجميع.
+  </p>
+
+  <p data-kashida="true">
+    نحن نؤمن أن كل فرد لديه القدرة على التعلم والتطور في بيئة تعليمية داعمة ومرنة.
+  </p>
+
+  <script type="module">
+    import kashida from './kashida.js';
+
+    function applyKashidaToAll() {
+      const elements = document.querySelectorAll('[data-kashida="true"]');
+
+      elements.forEach(el => {
+        const original = el.getAttribute('data-original-text') || el.textContent.trim();
+
+        // احفظ النص الأصلي إذا لم يكن محفوظاً مسبقاً
+        if (!el.getAttribute('data-original-text')) {
+          el.setAttribute('data-original-text', original);
+        }
+
+        const words = original.split(" ");
+        const elementWidth = el.offsetWidth;
+        const CHAR_WIDTH = 14; // تقدير متوسط لحجم الحرف (يمكن تعديله حسب الخط)
+        const LINE_LIMIT = Math.floor(elementWidth / CHAR_WIDTH);
+
+        let currentLine = "";
+        let lines = [];
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          const testLine = currentLine + " " + word;
+          if (testLine.length <= LINE_LIMIT) {
+            currentLine = testLine;
+          } else {
+            lines.push(currentLine.trim());
+            currentLine = word;
+          }
+        }
+        if (currentLine) lines.push(currentLine.trim());
+
+        const justifiedLines = lines.map(line => {
+          return line
+            .split(" ")
+            .map(word => {
+              const clean = word.replace(/[^ء-ي]/g, "");
+              return clean.length >= 6 ? kashida(word, 2, 0.6) : word;
+            })
+            .join(" ");
+        });
+
+        el.textContent = justifiedLines.join("\n");
+      });
+    }
+
+    // تشغيل عند التحميل
+    applyKashidaToAll();
+
+    // تشغيل عند تغيير الحجم
+    window.addEventListener("resize", () => {
+      applyKashidaToAll();
+    });
+  </script>
+</body>
+</html>
